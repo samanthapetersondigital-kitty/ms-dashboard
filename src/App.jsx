@@ -48,14 +48,81 @@ const CLIENT = {
 };
 
 // ─── EMAIL DATA ───────────────────────────────────────────────────────────────
-const EMAIL_TOP_LINES = [];
+const EMAIL_TOP_LINES = [
+  {
+    "subject": "SW_EM_EV_90DO_260105_1_1",
+    "sendDate": "1/5/26",
+    "period": "weekly",
+    "recipients": 590,
+    "opens": 299,
+    "openRate": 50.8,
+    "clicks": 61,
+    "clickRate": 10.5,
+    "unsubs": 1
+  },
+  {
+    "subject": "SW_EM_EN_180DO_260107_1_1",
+    "sendDate": "1/7/26",
+    "period": "weekly",
+    "recipients": 16639,
+    "opens": 3640,
+    "openRate": 21.9,
+    "clicks": 560,
+    "clickRate": 3.4,
+    "unsubs": 61
+  },
+  {
+    "subject": "SW_EM_EV_SF180DO_260108_1_1",
+    "sendDate": "1/8/26",
+    "period": "weekly",
+    "recipients": 5744,
+    "opens": 1332,
+    "openRate": 23.2,
+    "clicks": 91,
+    "clickRate": 1.6,
+    "unsubs": 11
+  },
+  {
+    "subject": "SW_EM_FR_180DO_260109_1_1",
+    "sendDate": "1/9/26",
+    "period": "weekly",
+    "recipients": 10959,
+    "opens": 2378,
+    "openRate": 21.7,
+    "clicks": 230,
+    "clickRate": 2.1,
+    "unsubs": 41
+  },
+  {
+    "subject": "SW_EM_FR_180DO_260110_1_2",
+    "sendDate": "1/10/26",
+    "period": "weekly",
+    "recipients": 16577,
+    "opens": 3342,
+    "openRate": 20.2,
+    "clicks": 413,
+    "clickRate": 2.5,
+    "unsubs": 55
+  },
+  {
+    "subject": "SW_EM_EN_SF_260111_1_1",
+    "sendDate": "1/11/26",
+    "period": "weekly",
+    "recipients": 6304,
+    "opens": 965,
+    "openRate": 15.3,
+    "clicks": 216,
+    "clickRate": 3.4,
+    "unsubs": 179
+  }
+];
 
 const EMAIL_MONTHLY_SUMMARY = {
-  sends: 0,
-  totalRecipients: 0,
-  avgOpenRate: 0.0,
-  avgClickRate: 0.0,
-  totalUnsubs: 0,
+  sends: 10,
+  totalRecipients: 90489,
+  avgOpenRate: 23.1,
+  avgClickRate: 3.5,
+  totalUnsubs: 507,
 };
 const EMAIL_QUARTERLY_SUMMARY = EMAIL_MONTHLY_SUMMARY;
 
@@ -170,7 +237,96 @@ const FINANCE_QUARTERLY = {
 const ACQUISITION_ROI = [];
 
 // ─── TEXTING ROI ──────────────────────────────────────────────────────────────
-const TEXTING_ROI = [];
+const TEXTING_ROI = [
+  {
+    "campaign": "Campaign Name",
+    "sendDate": "Send Date",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 0,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 0.0
+  },
+  {
+    "campaign": "250913_SW Masking Bill",
+    "sendDate": "2025-09-13",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 5953,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 4749.0
+  },
+  {
+    "campaign": "JG EOQ #2",
+    "sendDate": "2025-09-29",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 5500,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 995.0
+  },
+  {
+    "campaign": "SW EOQ #2",
+    "sendDate": "2025-09-30",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 4787,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 926.0
+  },
+  {
+    "campaign": "251022_Launch Donors",
+    "sendDate": "2025-10-22",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 5446,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 4297.0
+  },
+  {
+    "campaign": "251025 KICKOFF INVITE",
+    "sendDate": "2025-10-25",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 19206,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 16630.0
+  },
+  {
+    "campaign": "Kickoff - TURNOUT LAUNCH",
+    "sendDate": "2025-10-29",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 281,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 18.0
+  },
+  {
+    "campaign": "251104 to OPT INS",
+    "sendDate": "2025-11-04",
+    "period": "weekly",
+    "sent": 0,
+    "delivered": 0,
+    "responses": 8867,
+    "optOuts": 0,
+    "donations": 0,
+    "raised": 8448.0
+  }
+];
 
 // ─── ADS ──────────────────────────────────────────────────────────────────────
 const META_ADS = [];
@@ -178,15 +334,15 @@ const GOOGLE_ADS = [];
 
 // ─── GROWTH CALC ──────────────────────────────────────────────────────────────
 const GROWTH_CALC = [
-  { metric: "Avg Open Rate", value: "0.0%", benchmark: ">14% = Strong", status: "below" },
-  { metric: "Avg Click Rate", value: "0.0%", benchmark: ">3.0%", status: "below" },
+  { metric: "Avg Open Rate", value: "23.1%", benchmark: ">14% = Strong", status: "above" },
+  { metric: "Avg Click Rate", value: "3.5%", benchmark: ">3.0%", status: "above" },
   { metric: "Digital % of ActBlue", value: "20.8%", benchmark: "10–15%", status: "above" },
 ];
 
 const DEFAULT_HIGHLIGHTS = [
   "Dashboard initialized with data through April 14, 2026",
   "Digital raise: $19,816 (20.8% of total ActBlue)",
-  "Average email open rate: 0.0%",
+  "Average email open rate: 23.1%",
   "Total ActBlue raised: $95,060",
 ];
 
